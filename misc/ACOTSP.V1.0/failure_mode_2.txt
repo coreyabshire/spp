@@ -1,0 +1,102 @@
+corey@system76:~/Projects/SPP/misc/ACOTSP.V1.0$ ./acotsp -i lin318.tsp -v -t 60. -o 42029 -m 50 -b 5
+
+ACO algorithms for the TSP, v1.0
+	 OPTIONS:
+  -t  --time with argument "60.000"
+	Note: number or trials is set to default 10
+	Note: maximum number tours is set to default 100
+  -o  --optimum with argument "42029"
+  -i  --tsplibfile with argument "lin318.tsp"
+  -m  --ants with argument "50"
+	Note: number of nearest neighbours in tour construction is set to default 25
+	Note: alpha is set to default 1.0
+  -b  --beta with argument "5.000000"
+	Note: rho is set to default 0.5
+	Note: q_0 is set to default 0
+	Note: number of elitist ants is set to default 100
+	Note: number of ranks is set to default 6
+	Note: number nearest neighbours in local search is set to default 20
+	Note: local search flag is set to default 3 (3-opt)
+	Note: dlb flag is set to default 1 (use don't look bits)
+eas_flag is set to 1, run Elitist Ant System
+Non-option arguments:
+
+reading tsp-file lin318.tsp ... 
+
+EUC_2D
+EUC_2D
+calculating distance matrix ..
+
+ .. done
+
+Parameter-settings: 
+
+max-tries 10
+max-tours 100
+optimum 42029
+time 60.000000
+num-ants 50
+num-neigh 20
+alpha 1.000000
+beta 5.000000
+rho 0.500000
+q_0 0.000000
+branch-up 1.000010
+ls_flag 3
+nn_ls 20
+dlb_flag 1
+as_flag 0
+eas_flag 1
+ras_flag 0
+mmas_flag 0
+bwas_flag 0
+acs_flag 0
+
+allocate ants' memory ..
+
+ .. done
+
+Finally set ACO algorithm specific parameters, typically done as proposed in literature
+
+Initialization took 0.0100000000 seconds
+*** glibc detected *** ./acotsp: double free or corruption (!prev): 0x00000000009a4b60 ***
+======= Backtrace: =========
+/lib/libc.so.6[0x7f3cdce58cb8]
+/lib/libc.so.6(cfree+0x76)[0x7f3cdce5b276]
+./acotsp[0x40ab1a]
+./acotsp[0x403757]
+./acotsp[0x40197d]
+./acotsp[0x401cf2]
+/lib/libc.so.6(__libc_start_main+0xe6)[0x7f3cdcdff5a6]
+./acotsp[0x400e69]
+======= Memory map: ========
+00400000-0040e000 r-xp 00000000 08:01 15336195                           /home/corey/Projects/SPP/misc/ACOTSP.V1.0/acotsp
+0060d000-0060e000 r--p 0000d000 08:01 15336195                           /home/corey/Projects/SPP/misc/ACOTSP.V1.0/acotsp
+0060e000-0060f000 rw-p 0000e000 08:01 15336195                           /home/corey/Projects/SPP/misc/ACOTSP.V1.0/acotsp
+0092a000-009ae000 rw-p 0092a000 00:00 0                                  [heap]
+7f3cd8000000-7f3cd8021000 rw-p 7f3cd8000000 00:00 0 
+7f3cd8021000-7f3cdc000000 ---p 7f3cd8021000 00:00 0 
+7f3cdcaf3000-7f3cdcb09000 r-xp 00000000 08:01 33693757                   /lib/libgcc_s.so.1
+7f3cdcb09000-7f3cdcd09000 ---p 00016000 08:01 33693757                   /lib/libgcc_s.so.1
+7f3cdcd09000-7f3cdcd0a000 r--p 00016000 08:01 33693757                   /lib/libgcc_s.so.1
+7f3cdcd0a000-7f3cdcd0b000 rw-p 00017000 08:01 33693757                   /lib/libgcc_s.so.1
+7f3cdcd1a000-7f3cdcde1000 rw-p 7f3cdcd1a000 00:00 0 
+7f3cdcde1000-7f3cdcf49000 r-xp 00000000 08:01 33693836                   /lib/libc-2.9.so
+7f3cdcf49000-7f3cdd149000 ---p 00168000 08:01 33693836                   /lib/libc-2.9.so
+7f3cdd149000-7f3cdd14d000 r--p 00168000 08:01 33693836                   /lib/libc-2.9.so
+7f3cdd14d000-7f3cdd14e000 rw-p 0016c000 08:01 33693836                   /lib/libc-2.9.so
+7f3cdd14e000-7f3cdd153000 rw-p 7f3cdd14e000 00:00 0 
+7f3cdd153000-7f3cdd1d7000 r-xp 00000000 08:01 33694884                   /lib/libm-2.9.so
+7f3cdd1d7000-7f3cdd3d6000 ---p 00084000 08:01 33694884                   /lib/libm-2.9.so
+7f3cdd3d6000-7f3cdd3d7000 r--p 00083000 08:01 33694884                   /lib/libm-2.9.so
+7f3cdd3d7000-7f3cdd3d8000 rw-p 00084000 08:01 33694884                   /lib/libm-2.9.so
+7f3cdd3d8000-7f3cdd3f8000 r-xp 00000000 08:01 33693745                   /lib/ld-2.9.so
+7f3cdd455000-7f3cdd5e5000 rw-p 7f3cdd455000 00:00 0 
+7f3cdd5f1000-7f3cdd5f7000 rw-p 7f3cdd5f1000 00:00 0 
+7f3cdd5f7000-7f3cdd5f8000 r--p 0001f000 08:01 33693745                   /lib/ld-2.9.so
+7f3cdd5f8000-7f3cdd5f9000 rw-p 00020000 08:01 33693745                   /lib/ld-2.9.so
+7fffe55e4000-7fffe55f9000 rw-p 7ffffffea000 00:00 0                      [stack]
+7fffe55ff000-7fffe5600000 r-xp 7fffe55ff000 00:00 0                      [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+Aborted
+corey@system76:~/Projects/SPP/misc/ACOTSP.V1.0$ 

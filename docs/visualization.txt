@@ -1,0 +1,18 @@
+
+It would be nice to be able to better visualize the following during execution of my SPP search:
+
+ - elapsed time in milliseconds
+ - elapsed clocks used
+ - depth
+ - f-cost
+ - g-cost
+ - h-cost
+ - # characters needed
+ - # characters acquired
+ - # successors per expansion
+ - average branching factor
+ - # expansions
+ - size of starting cache
+ - size of ending cache
+ - estimate of at what depth we'll find the solution
+ - estimate of how long it will take to find the solution

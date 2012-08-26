@@ -1,0 +1,99 @@
+#S(ACTION :SIDE LHS :WORD piu)   #S(STATE :LHS (piu cup xenia de ar cape aa aa aa alow aa ava an acid aa aa aa jab jo bo aa ka la mi gab ar isatin uracil if ay aa aa aa aa aa aa ana laari ab rabat eh amu zit) :RHS (quippu cain exedrae paca aa aa awol aa aa vanadic aa aa aa aba jojoba aa kalimba granita silica rufiyaa aa aa aa aa aa aa naira albata ba rheumatiz) :LN 117 :RN 118 :SEEN (q x p w v d o j k g s c y f n l b a m u e h r t i z) :NEED NIL)
+======               =====
+Total of 943 nodes expanded.
+#<NODE f(251) = g(235) + h(0) state:#S(STATE :LHS (piu cup xenia de ar cape aa aa aa alow aa ava an acid aa aa aa jab jo bo aa ka la mi gab ar isatin uracil if ay aa aa aa aa aa aa ana laari ab rabat eh amu zit) :RHS (quippu cain exedrae paca aa aa awol aa aa vanadic aa aa aa aba jojoba aa kalimba granita silica rufiyaa aa aa aa aa aa aa naira albata ba rheumatiz) :LN 117 :RN 118 :SEEN (q x p w v d o j k g s c y f n l b a m u e h r t i z) :NEED NIL)>
+CL-USER> (solve *problem* 'tree-sma)
+
+
+
+Total of 943 nodes expanded.
+#<NODE f(251) = g(235) + h(0) state:#S(STATE :LHS (piu cup xenia de ar cape aa aa aa alow aa ava an acid aa aa aa jab jo bo aa ka la mi gab ar isatin uracil if ay aa aa aa aa aa aa ana laari ab rabat eh amu zit) :RHS (quippu cain exedrae paca aa aa awol aa aa vanadic aa aa aa aba jojoba aa kalimba granita silica rufiyaa aa aa aa aa aa aa naira albata ba rheumatiz) :LN 117 :RN 118 :SEEN (q x p w v d o j k g s c y f n l b a m u e h r t i z) :NEED NIL)>
+CL-USER> (solve *problem*)
+
+
+
+#S(ACTION :SIDE LHS :WORD piu)   #S(STATE :LHS (piu cup xenia de ar cape aa aa aa alow aa ava an acid aa aa aa jab jo bo aa ka la mi gab ar isatin uracil if ay aa aa aa aa aa aa ana laari ab rabat eh amu zit) :RHS (quippu cain exedrae paca aa aa awol aa aa vanadic aa aa aa aba jojoba aa kalimba granita silica rufiyaa aa aa aa aa aa aa naira albata ba rheumatiz) :LN 117 :RN 118 :SEEN (q x p w v d o j k g s c y f n l b a m u e h r t i z) :NEED NIL)
+======               =====
+Total of 943 nodes expanded.
+#<NODE f(251) = g(235) + h(0) state:#S(STATE :LHS (piu cup xenia de ar cape aa aa aa alow aa ava an acid aa aa aa jab jo bo aa ka la mi gab ar isatin uracil if ay aa aa aa aa aa aa ana laari ab rabat eh amu zit) :RHS (quippu cain exedrae paca aa aa awol aa aa vanadic aa aa aa aba jojoba aa kalimba granita silica rufiyaa aa aa aa aa aa aa naira albata ba rheumatiz) :LN 117 :RN 118 :SEEN (q x p w v d o j k g s c y f n l b a m u e h r t i z) :NEED NIL)>
+CL-USER> (solve *problem* 'tree-sma)
+
+
+
+======               =====
+Total of 943 nodes expanded.
+; compiling (DEFUN LETTER-COST ...)
+STYLE-WARNING: redefining LETTER-COST in DEFUN
+#<NODE f(251) = g(235) + h(0) state:#S(STATE :LHS (piu cup xenia de ar cape aa aa aa alow aa ava an acid aa aa aa jab jo bo aa ka la mi gab ar isatin uracil if ay aa aa aa aa aa aa ana laari ab rabat eh amu zit) :RHS (quippu cain exedrae paca aa aa awol aa aa vanadic aa aa aa aba jojoba aa kalimba granita silica rufiyaa aa aa aa aa aa aa naira albata ba rheumatiz) :LN 117 :RN 118 :SEEN (q x p w v d o j k g s c y f n l b a m u e h r t i z) :NEED NIL)>
+CL-USER> (h-cost *problem* (make-initial-state :lhs '("")))
+221
+CL-USER> (solve *problem* 'tree-sma)
+
+
+
+
+======               =====
+Total of 515 nodes expanded.
+#<NODE f(221) = g(211) + h(0) state:#S(STATE :LHS (sau is aa aa aa aa aa aa sab aw ajar ta ma ab cock xenia be once ganev bel pa uracil if ay pa de abaci aa aa aa ana laari ab rabat eh amu zit) :RHS (quassia aa aa aa aa aa aba swaraj aa tambak cocaine xebec novena gleba plica rufiyaa pedicab aa aa aa aa naira albata ba rheumatiz) :LN 105 :RN 106 :SEEN (q w s j k x o v g y f d p c n l b a m u e h r t i z) :NEED NIL)>
+CL-USER> (h-cost *problem* (make-initial-state :lhs '("")))
+; compiling (DEFUN LETTER-COST ...)
+STYLE-WARNING: redefining LETTER-COST in DEFUN
+221
+CL-USER> (h-cost *problem* (make-initial-state :lhs '("")))
+171
+CL-USER> (solve *problem* 'tree-sma)
+
+
+
+
+
+Total of 1199 nodes expanded.
+#<NODE f(171) = g(171) + h(0) state:#S(STATE :LHS (qat tau no sabe aw ajar aa aa daw save dap ace haaf bialy go xenia be ace ka ba abo ana laari ab rabat eh amu zit) :RHS (aquatone ba swaraj aa aa awa deva spa decaf aa hyla ibogaine xebec aa kabob aa naira albata ba rheumatiz) :LN 86 :RN 85 :SEEN (q j w v s p d f y g x c k o n l b a m u e h r t i z) :NEED NIL)>
+CL-USER> (h-cost *problem* (make-initial-state :lhs '("")))
+
+
+
+
+
+======               =====
+Total of 895 nodes expanded.
+; compiling (DEFUN STATE-PALINDROME ...)#<NODE f(136) = g(135) + h(0) state:#S(STATE :LHS (sau eh es dex ar eye aa ewe alive ka bo capo fa na adage jehad laari ab rabat eh amu zit) :RHS (quashes exedrae yea ae weevil aa kobo paca fanega dada hejira albata ba rheumatiz) :LN 67 :RN 68 :SEEN (q s x y w v k o c p n f g d j l b a m u e h r t i z) :NEED NIL)>
+CL-USER> (state-palindrome (node-state *))
+
+("zit" "amu" "eh" "rabat" "ab" "laari" "jehad" "adage" "na" "fa" "capo" "bo" "ka" "alive" "ewe" "aa" "eye" "ar" "dex" "es" "eh" "sau" "quashes" "exedrae" "yea" "ae" "weevil" "aa" "kobo" "paca" "fanega" "dada" "hejira" "albata" "ba" "rheumatiz")
+CL-USER> (format t "~{~a~^ ~}~%" *)
+zit amu eh rabat ab laari jehad adage na fa capo bo ka alive ewe aa eye ar dex es eh sau quashes exedrae yea ae weevil aa kobo paca fanega dada hejira albata ba rheumatiz
+NIL
+CL-USER> (time (solve *problem* 'tree-sma))
+
+
+
+
+Total of 895 nodes expanded.
+Evaluation took:
+  49.863 seconds of real time
+  24.888710 seconds of total run time (20.901348 user, 3.987362 system)
+  [ Run times consist of 4.267 seconds GC time, and 20.622 seconds non-GC time. ]
+  49.91% CPU
+  475,885,360 bytes consed
+  
+; compiling (DEFUN LETTER-COST ...)
+STYLE-WARNING: redefining LETTER-COST in DEFUN
+#<NODE f(136) = g(135) + h(0) state:#S(STATE :LHS (sau eh es dex ar eye aa ewe alive ka bo capo fa na adage jehad laari ab rabat eh amu zit) :RHS (quashes exedrae yea ae weevil aa kobo paca fanega dada hejira albata ba rheumatiz) :LN 67 :RN 68 :SEEN (q s x y w v k o c p n f g d j l b a m u e h r t i z) :NEED NIL)>
+
+
+
+
+Total of 15359 nodes expanded.
+Evaluation took:
+  12004.911 seconds of real time
+  7671.849648 seconds of total run time (6896.674213 user, 775.175435 system)
+  [ Run times consist of 765.782 seconds GC time, and 6906.068 seconds non-GC time. ]
+  63.91% CPU
+  104,309,595,584 bytes consed
+  
+#<NODE f(97) = g(97) + h(0) state:#S(STATE :LHS (cane qat sau jo pa kay eh wad laevo oaf admix rabat eh amu zit) :RHS (gen acta qua soja pya kheda wove alfa oxim data ba rheumatiz) :LN 48 :RN 49 :SEEN (g n c q j s p y k w v l f o x d b a m u e h r t i z) :NEED NIL)>
+CL-USER> (time (solve *problem* 'tree-sma))
+
+
+

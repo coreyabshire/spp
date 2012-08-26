@@ -1,0 +1,137 @@
+Title: Finding the Shortest Possible Palindromic Pangram
+Subtitle: An Admissable Heuristic and a Method for its Computation
+
+Abstract
+
+ITA Software lists several puzzles on its website that it uses to
+filter out candidates during its hiring process. One of those puzzles
+asks the person to find the shortest possible sequence of words that
+is both a palindrome and a pangram, using a supplied word list. This 
+paper describes an admissable heuristic to use in searching for a
+solution to this puzzle, and a reasonably efficient method for its 
+computation.
+
+Background
+
+This is a paper that describes my solution to the palindromic pangram
+problem proposed by ITA software.
+
+The problem statement is fairly straightforward. Given a list of
+words, candidates are to find the shortest sequence of a subset
+of those words that is both a palindrome and a pangram. For my
+solution, I take the assumption that shortest means in total number of
+total characters, excluding spaces, as opposed to total number of
+words.
+
+Search Problem Definition
+
+In order to be able to use general search algorithms, the problem
+needed to be restated as a search problem. My interpretation of this
+problem as a search problem.... I describe a state in the search space
+as a list of words on the left and right side of the candidate word
+sequence built thus far, along with the remaining characters in order
+to complete a full pangram. The initial state would thus be one in
+which there are no words on either the left or right side, and all 26
+letters of the alphabet remain to be found.
+
+The successor states from a given state can be found by adding any
+word that does not violate the palindrome constraint to the shorter of
+the two sides. If the left side is longer, we can take the letters on
+the left side that are unmatched on the right side as a string,
+reverse it, and then find all the words that end with that string. If
+the right side is longer, we again reverse the unmatched string, and
+find all the words that start with that string. For each such word
+that we find, we create a new successor state by adding that word to
+the shorter side. As we go along, we keep track of the letters that
+are remaining to be found.
+
+The goal state can be defined as a state in which the remainder of the
+letters to be found is itself a palindrome, and no letters remain to
+be found.
+
+The cost of a path to any such given state is simply the number of
+characters in all the words that have been visited.
+
+My solution is based around a straightforward search approach as
+described by Norvig and Russell in AI: A Modern Approach.
+
+I experimented with several of the algorithms advised in the book with
+varying degrees of success.
+
+The first noteworthy aspect of the program is the treatment of the
+palindrome building process. I was inspired by Norvigs approach to
+generating the longest possible palindrome (1) and found it useful to
+view the search as alternating between the left and right sides of the
+palindrome. That is, starting with an empty set of words, I add any
+word on the left to yeild the next set of search nodes. Then, from any
+given such state, the only legal successor states are words having the
+reverse of the remaining characters as either making up the whole
+word, or as making up the first portion of the word.
+
+The next noteworthy piece is the pangram tracking.
+
+The final noteworthy piece is the heuristic function. After describing
+the problem in a manner compatible with the general search algorithsm,
+I found through experiementation and subsequently through calculations
+that a good heuristic was the only way to make this problem
+approachable. The only heuristic I found at first that had some degree
+of success was based on an assumption that the letters that had the
+fewest words available would require more characters in order to
+complete the solution. I defined the function specifically as the sum
+of the squares of the rankings of the remaining characters. Using this
+approach, I am able to find reasonably short solutions within 1000 or
+so nodes. This heuristic, while useful and fast at finding a solution
+efficiently, does not find an optimal solution, because we have no way
+of proving that just because its not likely that there is a J word for
+instance having that letter, that there istn' a perfect word out there
+having that letter combintaion.
+
+The most obvious heuristic is to use the number of letters remaining *
+2 - 1. This is the absolute minimum that could be found that would
+meet the requirements. It is good because it never overestimates the
+remaining letters. It is bad in the sense that it doesn't prune enough
+of the tree to really get the problem within a solvable time. I
+estimate that the time required to solve this problem with even the
+best algorithms to be many thousands of years on my machine.
+
+The best heuristic I could think of that would be both optimal and
+prune the tree enough is itself difficult to compute. Basically, it
+relaxes the problem constraint and uses the answer of that as the
+basis for the remaining path cost. It is the required number of
+characters to form any pangram given the set of remaining characters *
+2 - 1. This is admissable because it is based on a subconstraint of
+the original problem. It ends up yielding answers similar to the fast
+heuristic described earlier.
+
+The difficulty comes in trying to compute the heuristic. I started by
+trying to use the same approach I was taking for the larger problem,
+but ran into the same difficulty of the search tree being too
+complex. Then I realized I could scale the definition of the problem
+back even further given that I only had the requirement of finding the
+cost of the path to the shortest pangram, rather than the actual
+pangram itself.
+
+Also, it was around this time that I realized I could treat the
+letters required as bits of an integer. Given that the most characters
+it should take to form any required letter set, even a full pangram,
+in around 60 characters, this means that I could solve all of the path
+costs in only 2 ^ 26 bytes of memory. Thus I could hold cache the
+h-cost completely in memory. Further, I found a reasonable algorithm
+for computing this entire table in a reasonable amount of time.
+
+
+Useful Statistics
+
+Total # of words in set:
+Letter distribution (# of words having the letter): a - 123, b 1235, etc...
+Letter distribution (total # of letters): a - 2384, b 3294, etc...
+
+
+
+References
+
+AI: A Modern Approach
+On Lisp
+Common Lisp The Language, Second Edition
+Norvig Palindrome Page
+ITA Software Website Problem Description

@@ -1,0 +1,63 @@
+corey@system76:~/Projects/SPP/misc/ACOTSP.V1.0$ ./acotsp -i lin318.tsp -v -t 60. -o 42029 -m 50 -b 5
+
+ACO algorithms for the TSP, v1.0
+	 OPTIONS:
+  -t  --time with argument "60.000"
+	Note: number or trials is set to default 10
+	Note: maximum number tours is set to default 100
+  -o  --optimum with argument "42029"
+  -i  --tsplibfile with argument "lin318.tsp"
+  -m  --ants with argument "50"
+	Note: number of nearest neighbours in tour construction is set to default 25
+	Note: alpha is set to default 1.0
+  -b  --beta with argument "5.000000"
+	Note: rho is set to default 0.5
+	Note: q_0 is set to default 0
+	Note: number of elitist ants is set to default 100
+	Note: number of ranks is set to default 6
+	Note: number nearest neighbours in local search is set to default 20
+	Note: local search flag is set to default 3 (3-opt)
+	Note: dlb flag is set to default 1 (use don't look bits)
+eas_flag is set to 1, run Elitist Ant System
+Non-option arguments:
+
+reading tsp-file lin318.tsp ... 
+
+EUC_2D
+EUC_2D
+calculating distance matrix ..
+
+ .. done
+
+Parameter-settings: 
+
+max-tries 10
+max-tours 100
+optimum 42029
+time 60.000000
+num-ants 50
+num-neigh 20
+alpha 1.000000
+beta 5.000000
+rho 0.500000
+q_0 0.000000
+branch-up 1.000010
+ls_flag 3
+nn_ls 20
+dlb_flag 1
+as_flag 0
+eas_flag 1
+ras_flag 0
+mmas_flag 0
+bwas_flag 0
+acs_flag 0
+
+allocate ants' memory ..
+
+ .. done
+
+Finally set ACO algorithm specific parameters, typically done as proposed in literature
+
+Initialization took 0.0100000000 seconds
+Segmentation fault
+corey@system76:~/Projects/SPP/misc/ACOTSP.V1.0$ 

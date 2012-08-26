@@ -1,0 +1,16 @@
+
+
+
+ Current Goal
+ ------------
+
+   Establish the framework for making hypothesis and testing them.
+   
+   Need to be able to:
+   
+     - define and compare various search algorithms
+     
+     - define and compare relevant heuristics
+     
+     - define and compare
+     
